@@ -36,30 +36,30 @@
  
    
 
-     <button onclick="
+ <button onclick="
 
-     const ComputerMove = pickComputerMove();
-    
-      let result = '';
-      
-      let computerMove = 'Paper';
-    
-      if(computerMove === 'rock') {
-      result =  'You lose'
-      } else if (computerMove === 'paper') {
-        result = 'You win'
-      } else if ( computerMove === 'scissors') {
-        result = 'Tie';
-      }
-    
-      alert(`You picked Scissors. Computer picked ${computerMove}. ${result}`);
-    
-    
-        ">
-          Paper
-        </button>
-    
-
+  const ComputerMove = pickComputerMove();
+ 
+   let result = '';
+   
+   let computerMove = 'rock';
+ 
+   if(computerMove === 'rock') {
+   result =  'You lose'
+   } else if (computerMove === 'paper') {
+     result = 'You win'
+   } else if ( computerMove === 'scissors') {
+     result = 'Tie';
+   }
+ 
+   alert(`You picked Scissors. Computer picked ${computerMove}. ${result}`);
+ 
+ 
+     ">
+       Rock
+     </button>
+ 
+   
 
 
     <button onclick="
