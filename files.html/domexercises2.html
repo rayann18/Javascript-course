@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dom exercises</title>
+</head>
+
+<style>
+  .gaming-btn{
+    background-color: rgb(230,230,230);
+    color: black;
+    border-radius: 9px ;
+    border: none;
+    padding: 15px 10px;
+  }
+  .is-toggled{
+    background-color: lightgray;
+  }
+</style>
+<body>
+  <button id="toggleButton" class="gaming-btn"
+  >Gaming</button>
+
+
+  
+
+  <script>
+    const button = document.getElementById('toggleButton');
+    button.addEventListener('click', () => {
+      button.classList.toggle('is-toggled')
+    })
+
+  </script>
+</body>
+</html>

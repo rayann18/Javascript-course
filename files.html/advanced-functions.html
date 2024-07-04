@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced functions exercises</title>
+</head>
+<body>
+  <button id="start-button">Start</button>  
+  <button id="start-button">Start</button>  
+  <button id="add-to-cart">Add to Cart</button>
+  <div id="message"></div>
+
+  <button id="add-cart">Add cart</button>
+  <div id="message" style="display: none;">added</div>
+  <script>
+    //1
+  const add = function(){
+      console.log(2+3)
+}
+    add()
+    add()
+   //2
+function runTwice(fun){
+  fun()
+  fun()
+}
+
+runTwice(function(){
+  console.log('12b')
+})
+runTwice(add)
+
+//3
+document.getElementById('start-button').addEventListener('click' , function(){
+  const button = this;
+  setTimeout(function(){
+    button.innerHTML = 'Finished'
+  }, 1000)
+})
+
+//4
+document.getElementById('start-button').addEventListener('click', function(){
+  const button = this;
+  button.textContent = 'loading';
+  setTimeout(function(){
+    button.textContent = 'Finished'
+  }, 1000)
+})
+
+
+
+
+//5
+
+let timeoutId;
+
+document.getElementById('add-to-cart').addEventListener('click' , function(){
+
+  if(timeoutId){
+    clearTimeout(timeoutId)
+  }
+
+  document.getElementById('message').style.display = 'block';
+
+  timeoutId = setTimeout(function(){
+    document.getElementById('message').style.display = 'none'
+  }, 2000);
+  
+  setTimeout(function(){
+    messageDiv.textContent= ''
+  }, 2000) 
+})
+
+
+document.getElementById('add-to-cart').addEventListener('click', function(){
+  const messageDiv = document.getElementById('message');
+  messageDiv.textContent = 'Added'
+  setTimeout(function(){
+    messageDiv.textContent= ''
+  }, 2000)
+})
+
+//6
+const regularfunction = function(param) {
+  console.log('hello');
+  return 5
+}
+
+
+
+
+const arrowfunction = (param , param2) => {
+
+  console.log('hello');
+  return 5
+}
+arrowfunction()
+
+
+const onePram = param => {
+  console.log(param+1)
+}
+onePram(2)
+
+
+const oneLine = () => {return 2+3 }
+console.log(oneLine())
+  </script>
+</body>
+</html>

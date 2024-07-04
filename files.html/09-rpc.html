@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+
+</style>
+<body>
+  <p class="title">Rock paper scissors </p>
+
+<button class="move-button js-rock-button" >✊</button>
+<button class="move-button js-paper-button" >🖐</button>
+<button  class="move-button js-scissors-button" > ✌</button>
+
+
+<p class="js-score"></p>
+
+
+<button class="score" onclick="
+score.wins = 0;
+score.losses = 0;
+score.ties = 0;
+
+localStorage.removeItem('score')
+
+" class="score">
+ Reset score</button>
+<button class="auto-play-button" onclick="autoplay()">Auto play</button>
+<script>
+
+  
+</script>
+</body>
+</html>

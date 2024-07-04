@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  .add-btn{
+    background-color: rgb(255, 216 , 20);
+    color: black;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 15px;
+  }
+
+  .req-btn{
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+
+  }
+  .schedule-btn{
+    background-color: rgb(230,230,230);
+    color: black;
+    border-radius: 9px ;
+    border: none;
+    padding: 15px 10px;
+  }
+  .Am-full{
+    background-color: rgb(240, 240, 240);
+    color: black;
+  }
+  .request-btn{
+  background-color: green;
+  color: white;
+  cursor: pointer;
+  }
+  .schedule-later-btn{
+    background-color: black;
+    color: white;
+  }
+
+  .is-toggled{
+  background-color: lightgray;
+  }
+</style>
+<body>
+
+<button onclick="displayChoice('heads')">heads</button>
+<button onclick="displayChoice('tails')">tails</button>
+<p id ='choiceDisplay' ></p>
+
+
+
+<input type="text" id="nameInput" placeholder="Name" onkeydown="checkEnter(event)"> <button onclick="displayText()">Submit</button>
+<p id="displayText"></p>
+
+
+
+<input type="text" placeholder="Type something" onkeyup="updateText()">
+<p id="typedText"></p>
+
+
+
+
+<button class="add-btn js-add-btn" onclick="addTocart()" onkeyup="">Add to cart</button> <p id="typed text" onclick="updateText()"></p><br>
+
+<button onclick="requestFunc()" class="req-btn  js-req-btn">Request Now</button> <button onclick="scheduleFor()" class="schedule-btn js-schedule-btn">Schedule for later</button> <br>
+
+
+<button id="toggleButton ">Gaming</button>
+
+<script>
+
+</script>
+<script src="Scripts.js/dom-exercises.js"></script>
+</body>
+</html>

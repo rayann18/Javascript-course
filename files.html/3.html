@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document 3</title>
+</head>
+<style>
+  .is-toggled{
+    background-color: rgb(230,230,230);
+    color: black;
+    border-radius: 9px ;
+    border: none;
+    padding: 15px 10px;
+  }
+</style>
+<body>
+  <button class="toggleButton">Gaming</button>
+  <button class="toggleButton">Music</button>
+  <button class="toggleButton">Tech</button>
+
+  <script>
+document.querySelectorAll('.toggleButton').forEach(button => {
+  button.addEventListener('click', () =>{
+    button.classList.toggle('is-toggled')
+  });
+});
+  </script>
+</body>
+</html>

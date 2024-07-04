@@ -1,29 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  
-<button onclick="playGame('rock')">rock</button>
-<button onclick="playGame('paper')">paper</button>
-<button onclick="playGame('scissors')"> scissors </button>
-
-<button onclick="
-score.wins = 0;
-score.losses = 0;
-score.ties = 0;
-
-localStorage.removeItem('score')
-
-">
- Reset score</button>
-
-<script>
-
-  let score = 
+let score = 
   
 (JSON.parse(localStorage.getItem('score')));
   
@@ -76,9 +51,3 @@ wins : ${score.wins} , losses : ${score.losses}, ties: ${score.ties}
   
   `);
 }
-
-
-  
-</script>
-</body>
-</html>

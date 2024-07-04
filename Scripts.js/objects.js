@@ -1,20 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-
-
-<button onclick="playgame('heads')">heads</button>
-<button onclick="playgame('tails')">tails</button>
-
-
-
-  <script>
-    /*
+  
     let product ={
       name : 'basketball',
       price: 2095,
@@ -30,9 +14,7 @@
     console.log(product)
     console.log(product.delivery-time)
     
-     
-    */
-   /*
+   
     
     let product1 = {name: 'Basketball' , price: 595}
     let product2 = {name: 'Basketball' , price: 1995}
@@ -47,9 +29,7 @@
     }
     console.log(comparePrice(product1, product2))
 
-*/
 
-/*
 const product1 = {name:'netball' , price : 100}
 const product2 = {name : 'netball', price : 500}
 
@@ -63,8 +43,7 @@ if(product1 === product2){
 console.log(isSameProduct(product1.name.price, product2.name.price))
 
 
-*/
- /*
+
 const product3 = {name:'football' , price : 100}
 const product4 = {name : 'volleyball' , price: 100}
 
@@ -81,10 +60,7 @@ function isSameProduct(product1, product2){
 
 console.log(isSameProduct(product1,product2))
 console.log(isSameProduct(product3,product4))
-*/
 
-
-/*
 var greeting = 'GoodMorning'
 var greeting2 = greeting.toLowerCase();
 console.log(greeting2 )
@@ -95,9 +71,7 @@ var rptgreeting = 'test  '.repeat(15)
 
 console.log(rptgreeting)
 
-*/
 
-/*
 let calculation = 4
 let loadedCalculation = loadCalculation();
 
@@ -110,7 +84,6 @@ function loadCalculation(){
 }
 
 console.log(loadedCalculation)
-*/ 
 
 
 
@@ -175,10 +148,61 @@ console.log(loadedScore);
 
 
 
-    </script>
+
+
+//objects
+
+const person =  {name : 'alice' , age : 30 ,
+   
+greet : function() //object method     
+    {
+    console.log('hello')
+  }
+}
+console.log(person.name);
+console.log(person.age);
+person.greet()
+
+
+ //objects as refferences
+
+ const original = {name : 'alice'}
+ const copy = original 
+ console.log(copy)
+
+
+ copy.name = 'bob'
+ console.log(original.name )
+ console.log(copy.name )
+
+
+ //object destructuring
 
 
 
+ const user1 = {
+ username: 'jdoe' , email: 'jdoeatgmail.com',}
+ console.log(user1.username)
 
-</body>
-</html>
+
+ const  {username , email} = user1
+ console.log(username)
+ console.log(email)
+
+
+//shorthand method
+
+const car = {
+  brand : 'toyota',
+  model : 'corrola',
+  start(){console.log('car started')} // object method
+}
+car.start()
+
+
+//shorthand property
+
+const brand = 'ford'
+const model = 'mustang'
+const vehicle = {brand , model , year: 2021}
+console.log(vehicle)
