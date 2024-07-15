@@ -4,7 +4,9 @@ import { formatCurrency } from '../utils/money.js';
 import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js' // default export
 import {deliveryOptions , getDeliveryOption} from '../../data/deliveryOptions.js'
 import { renderPaymentSummary } from './paymentsummary.js';
-//run dayjs external lib 
+
+
+//run dayjs external lib dayjs
 /*
 const today = dayjs();
 const deliveryDate  = today.add(7, 'days');

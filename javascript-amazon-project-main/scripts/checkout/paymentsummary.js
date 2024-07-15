@@ -1,8 +1,10 @@
 import { cart } from '../../data/cart.js';
 import { getProduct } from '../../data/products.js';
 import { getDeliveryOption } from '../../data/deliveryOptions.js';
-import formatCurrency from '../utils/money.js';
+import {formatCurrency} from '../utils/money.js';
+   
 
+// model
 export function renderPaymentSummary(){
 
 
@@ -23,7 +25,8 @@ const totalBeforeTax = productPriceCents + shippingPriceCents;
 const taxCents = totalBeforeTaxCents * 0.1;
 const totalCents = totalBeforeTaxCents + taxCents;
 
-const paymentsummaryHTML = `
+// view 
+const paymentsummaryHTML = `   
 
 <div class="payment-summary-title">
   Order Summary
@@ -58,7 +61,8 @@ const paymentsummaryHTML = `
   Place your order
 </button>  `;
 
-document.querySelector('.js-payment-summary')
+// controller
+document.querySelector('.js-payment-summary')   
 .innerHTML = paymentsummaryHTML;
 
 
