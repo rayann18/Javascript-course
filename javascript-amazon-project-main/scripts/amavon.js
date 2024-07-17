@@ -47,6 +47,11 @@ productsHTML += `
       </select>
     </div>
 
+${product.extrainfoHTML()} 
+
+
+
+
     <div class="product-spacer"></div>
 
     <div class="added-to-cart">
