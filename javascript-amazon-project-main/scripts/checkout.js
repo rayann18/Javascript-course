@@ -5,7 +5,7 @@ import { renderOrderSummary } from './checkout/ordersummary.js';
 renderOrderSummary();
 
 import { renderPaymentSummary } from './checkout/paymentsummary.js'
-import { loadProducts } from '../data/products.js';
+import { loadProducts, loadProductsFetch } from '../data/products.js';
 import { loadCart } from '../data/cart.js';
 // import '../data/cart-class.js';
 
@@ -13,14 +13,7 @@ import { loadCart } from '../data/cart.js';
 
 
 Promise.all([
-  new Promise((resolve, reject) => {
-
-    loadProducts( () => { // load products
-    
-      resolve('value 1')  // wait for products to finish loading, call resolve
-    });
-    
-    }), 
+  loadProductsFetch(), 
     new Promise((resolve, reject) => {
       loadCart(() => {
         resolve()
