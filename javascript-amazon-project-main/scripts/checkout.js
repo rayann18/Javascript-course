@@ -12,17 +12,21 @@ import { loadCart } from '../data/cart.js';
 // import '../data/backend-practice.js'
 
 async function loadPage(){       // makes a function return a promise
-
-
-
-
-await loadProductsFetch();    // await lets loadproductsfetch to finish before going to the next line
+try{    //code that could cause an error into try
+  //throw 'error 1'   creation of custom errors using throw
+  await loadProductsFetch();    // await lets loadproductsfetch to finish before going to the next line
   
-const value =  await new Promise((resolve, reject) => {  // load cart and wait for it to finish
-  loadCart(() => { 
-    resolve(value)
-  })
-}) 
+  const value =  await new Promise((resolve, reject) => {  // load cart and wait for it to finish
+    // throw 'error 2'
+    loadCart(() => { 
+     // reject('error 3')  creation of errors in the future using promises
+      resolve(value)
+    })
+  }) 
+} catch(error){ // catches the error in try block if its present
+  console.log('unexpected error . please try again later ')
+}
+
 
 renderOrderSummary();    // run the rest of the code
 renderPaymentSummary();

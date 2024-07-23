@@ -106,6 +106,8 @@ function loadProductsFetch(){
     return new Product(productDetails);
     });
     console.log('load products');
+  }).catch( (error) => {   // error handling method, also gets a parameter error
+    console.log('unexpected error . please try again later ')
   })
   return promise
 }
@@ -114,7 +116,7 @@ function loadProductsFetch(){
 loadProductsFetch().then( () => {
   console
 });
-export function loadProducts(fun){ // fun is called a callback , itll be run on the future
+export function loadProducts(fun){ // fun is called a callback , it'll be run on the future
  const xhr =  new XMLHttpRequest();
 
  xhr.addEventListener('load', () => {
@@ -127,6 +129,10 @@ return new Product(productDetails);
 console.log('load products')
 
 fun();
+ })
+
+ xhr.addEventListener('error', (error) => {    // set up a seperate callback just for errors
+  console.log('unexpected error . please try again later ')
  })
  
  xhr.open('GET', 'https://supersimple.dev/products');
