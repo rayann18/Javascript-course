@@ -83,6 +83,6 @@ addOrder(order);
 }catch(error){
 console.log('unexepected error occured. please try again later')
 }
-window.location.href = 'orders.html';
+window.location.href = 'orders.html';   // filepath to orders page
 })
 }
