@@ -11,7 +11,27 @@ import { loadCart } from '../data/cart.js';
 
 // import '../data/backend-practice.js'
 
+async function loadPage(){       // makes a function return a promise
 
+
+
+
+await loadProductsFetch();    // await lets loadproductsfetch to finish before going to the next line
+  
+const value =  await new Promise((resolve, reject) => {  // load cart and wait for it to finish
+  loadCart(() => { 
+    resolve(value)
+  })
+}) 
+
+renderOrderSummary();    // run the rest of the code
+renderPaymentSummary();
+
+}
+
+loadPage();
+
+/*
 Promise.all([
   loadProductsFetch(), 
     new Promise((resolve, reject) => {
@@ -24,7 +44,7 @@ Promise.all([
   renderOrderSummary();
   renderPaymentSummary();
 })
-
+*/
 
 /*
 new Promise((resolve, reject) => {
